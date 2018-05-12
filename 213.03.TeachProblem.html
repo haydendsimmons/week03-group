@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style>
+      /* #0 Abrial Marroquin */
+      
+      * {
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+      }  
+      
+      /*-----------------Large Elements/Grid------------------*/
+      
+      body {
+          background-image: url("https://4.bp.blogspot.com/-06IPFRCgmH0/VDuFtXJZZNI/AAAAAAAAGjw/K1ew83hDI_c/s1600/seamless-wood-pattern.jpg");
+          /* By V. Hartikainen via tiled-bg.blogspot.com. Creative Commons 3.0 Unported License */
+          width: 600px;
+          height: 400px;
+          margin: -6% auto;
+          font-family: sans-serif;
+      }
+      
+      .document {
+          background-color: none;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(5, auto);
+          -moz-transform: rotate(-90degrees);
+          -webkit-transform: rotate(-90degrees);
+          -ms-transform: rotate(-90degrees);
+          -o-transform: rotate(-90degrees);
+          transform: rotate(-90deg);
+      }
+      
+      #title {
+          grid-column: 1/4;
+          grid-row: 1/2;
+          background-color: red;
+          font-family: monospace;
+      }
+      
+      #bottom {
+          grid-column: 1/4;
+          grid-row: 5-6;
+          background-color: dodgerblue;
+          text-align: right;
+          padding: 2% 5%;
+      }
+      
+      .content {
+          grid-column: 1/4;
+          grid-row: 2/5;
+          display: grid;
+          grid-template-columns: repeat(2, 30%);
+          grid-template-rows: repeat(2, auto);
+      }
+      
+      #menuBar {
+          background-color: orange;
+          grid-column: 1/2;
+          grid-row: 1/3;
+      }
+      
+      #text {
+          background-color: yellow;
+          grid-column: 2/4;
+      }
+      
+      #sidebar {
+          background-color: yellowgreen;
+          grid-column: 2/4;
+      }
+      
+      /*-----------------Headers------------------*/
+      
+      #title h1 {
+          font-size: 250%;
+          color: white;
+          text-decoration: overline underline;
+          text-decoration-style: wavy;
+          text-decoration-color: black;
+          padding: 5% 0;
+      }
+      
+      h1 {
+          font-family: monospace;
+          padding: 2%;
+          margin: 0 0 0 5%;
+          font-size: 150%;
+      }
+      
+      h3 {
+          font-family: monospace;
+          padding: 2%;
+          margin: 0 0 0 5%;
+          font-size: 150%;
+      }
+      
+      /*-----------------Paragraphs------------------*/
+      
+      p {
+          padding: 2%;
+          margin: 0 5% 2% 5%;
+      }
+      
+      /*-----------------Lists and Links------------------*/
+      
+      ul {
+          padding: 5% 0 0 20%;
+          margin: 10% auto;
+          line-height: 150%;
+          text-decoration: line-through;
+          list-style-type: lower-alpha;
+      }
+      
+      a {
+          display: inline-block;
+          margin: 5% 0 3% 3%;
+          padding: 3%;
+          text-decoration: none;
+          border-radius: 75%;
+          background-color: rebeccapurple;
+          color: white;
+      }
+      
+      </style>
+      <style>
+      /* #1 Hayden Simmons*/
+      
+      @keyframes redToBlack {
+          from {
+              color: #E82C0C;
+          }
+          to {
+              color: #3C3C3C;
+          }
+      }
+      
+      h1,
+      h3 {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      
+      h1:nth-child(3) {
+          animation-name: redToBlack;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+      }
+      
+      .document {
+          padding: 30px 40px 50px 40px;
+          width: 375px;
+          background-color: #f3f3f3;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          border: 40px solid black;
+          border-radius: 25px;
+      }
+      
+      #title {
+          background-color: #0070B6;
+          padding: 15px 15px 15px 25px;
+          color: #fff;
+          font-size: 1.4em;
+      }
+      
+      body {
+          background: linear-gradient(#E4EEF0, #BBCFDA);
+          color: #3c3c3c;
+          font-size: .9em;
+      }
+      
+      .menuBarItem,
+      p a {
+          display: inline-block;
+          border: solid 3px #0070B6;
+          color: #0070B6;
+          padding: 10px;
+          text-decoration: none;
+          font-family: Arial, Helvetica, sans-serif;
+          text-transform: uppercase;
+      }
+      
+      #menuBarList {
+          padding: 15px 15px 15px 0px;
+      }
+      
+      #text p a {
+          margin: 20px 0px 15px 0px;
+      }
+      
+      #bottom {
+          text-decoration: line-through;
+      }
+      
+      #sidebar h3 {
+          color: #3DB63C;
+      }
+      
+      </style>
+      <style>
+      /* #2 Stettsen Olsen */
+      
+      @keyframes back {
+          0% {
+              background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Diamond_Plate.jpg/800px-Diamond_Plate.jpg) no-repeat center fixed;
+              background-size: cover;
+          }
+          50% {
+              background: black;
+          }
+      }
+      
+      body {
+          animation-name: back;
+          animation-duration: 5s;
+          background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Diamond_Plate.jpg/800px-Diamond_Plate.jpg) no-repeat center fixed;
+          background-size: cover;
+      }
+      
+      #title {
+          border: 6px solid black;
+          background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url(https://mmalife.com/wp-content/uploads/2016/10/Should-You-Lift-Weights-for-MMA.jpg);
+          border-radius: 6px;
+          max-width: 400px;
+          font-size: 16px;
+          text-align: center;
+          margin: auto;
+      }
+      
+      #menuBar {
+          border: 6px solid red;
+          border-radius: 6px;
+          background-color: rgba(255, 0, 0, 0.5);
+          max-width: 200px;
+          margin: auto;
+          text-transform: uppercase;
+          text-indent: -20px;
+          font-size: 16px;
+          color: white;
+      }
+      
+      #text {
+          font-size: 16px;
+          text-align: center;
+          max-width: 800px;
+          margin: auto;
+      }
+      
+      a {
+          background-color: rgba(125, 0, 0, 1.0);
+          border: white;
+          border-radius: 12px;
+          color: black;
+          padding: 15px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+      }
+      
+      h3 {
+          border: 6px solid red;
+          background-color: black;
+          font-size: 16px;
+          text-align: center;
+          max-width: 800px;
+          margin: auto;
+          color: white;
+      }
+      
+      p {
+          font-size: 16px;
+          text-align: center;
+          max-width: 800px;
+          margin: auto;
+          color: white;
+      }
+      
+      </style>
+      <style> /* Hayden Simmons II */
+      @keyframes galaxy {
+        from {
+          background-color: #592c82;
+        }
+        to {
+          background-color: #0040B9;
+        }
+      }
+
+      @keyframes galaxyText {
+        from {
+          color: #0040B9;
+        }
+        to {
+          color: #fff;
+        }
+      }
+
+      @keyframes doADance {
+        from {
+          margin-left: 100%;
+        }
+        to {
+          margin-left: 0%;
+        }
+      }
+
+      body {
+        background-color: #592c82;
+        animation-name: galaxy;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        color: #ffffff;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        letter-spacing: 5px;
+      }
+
+      .document {
+        width: 400px;
+        margin-left: 50%;
+        animation-name: galaxyText;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
+      #instructions {
+        color: #fff;
+      }
+
+      #bottom {
+        animation-name: doADance;
+        animation-duration: 2s;
+        animation-iteration-count: 10;
+      }
+
+      div:nth-child(even) {
+        transform: rotate(180deg);
+      }
+
+      #menuBar {
+        display: none;
+      }
+
+      h1 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+
+      #text a {
+        font-size: 32px;
+        text-decoration: none;
+      }
+	    </style>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Week 03 : CSS</title>
+   </head>
+   <body onload="disableStyles()">
+      <div class="document">
+        <div id="title">
+          <h1>Week 03 : CSS</h1>
+          <p>This page will demonstrate how to switch between different CSS stylesheets to achieve a given effect</p>
+        </div> <!--title -->
+        <div class="content">
+          <div id="menuBar">
+            <ul id="menuBarList">
+              <li class="menuBarItem" onclick="applyStyle(0)">Stylesheet 1</li>
+              <li class="menuBarItem" onclick="applyStyle(1)">Stylesheet 2</li>
+              <li class="menuBarItem" onclick="applyStyle(2)">Stylesheet 3</li>
+              <li class="menuBarItem" onclick="applyStyle(3)">Stylesheet 4</li>
+              <li class="menuBarItem" onclick="disableStyles()">No Stylesheet</li>
+            </ul>
+          </div> <!-- menuBar -->
+          <div id="text">
+            <h1>Select the Stylesheet</h1>
+            <p>There are four stylesheets that you may select from. Each one will change the coloring, fonts, 
+            		and even the layout of the page.You can change the layout of this page by selecting different 
+                    stylesheets in the menu, or by selecting one of the following links:<br>
+              <a href="#" onclick="applyStyle(0)">Stylesheet 1</a>,
+              <a href="#" onclick="applyStyle(1)">Stylesheet 2</a>,
+              <a href="#" onclick="applyStyle(2)">Stylesheet 3</a>,
+              <a href="#" onclick="applyStyle(3)">Stylesheet 4</a>.
+            </p>
+             <h1>Instructions</h1>
+            <p id="instructions">Please modify this page to include a description of each stylesheet, including anything clever that 
+            		you did to achieve a given effect. Please also include the contributors to a given stylesheet.</p>
+         </div> <!-- text -->
+         <div id="sidebar">
+           <h3>Grading</h3>
+            <p>In order to get full credit for this assignment, you will need to demonstrate what you have learned 
+            		and how you helped your classmates. This means your contribution needs to be briefly described 
+                    on the page.</p>
+          </div> <!--sidebar -->
+        </div> <!-- content -->
+        <div id="bottom">Submit this assignment by </div>
+      </div> <!-- document -->
+      
+      <script>
+	    <!-- DISABLE STYLES: This function turns off the four stylesheets -->
+	    function disableStyles() 
+		{
+		  document.styleSheets[0].disabled = true;
+		  document.styleSheets[1].disabled = true;
+		  document.styleSheets[2].disabled = true;
+		  document.styleSheets[3].disabled = true;
+		}
+
+    <!-- APPLY DESCRIPTIONS: This function adds descriptions to the instructions section -->
+    
+    function applyDescription(i)
+    {
+      var descriptions = ["<strong>Abrial Marroquin</strong> - For this style sheet, I wanted to focus on the power of the grid system. I placed all the main sections into a grid format. There is a main grid with the title, content and bottom and a sub-grid with the menuBar, text and sideBar.  I used bold colors to put emphasis on the grid sections. I played with different text-decorations and styles including strike-through and wavy (underline and overlines). I used a few different colors for text and links, but didn't make this a focus as it is a commonly used practice. I tried out something I have heard was possible, but never had a chance to do. I used the transform: rotate attribute to make the whole page rotate left 90 degrees. Of course, it isn't something I would use for a whole page, but to be able to rotate certain elements could be beneficial in the future. Finally, I demonstrated how an image can be included using a url. I used this for the body background image, but the same concept can be used for other elements, including list-item-type: url(); so the possibilities are endless.", 
+      "I have used a keyframe to create an animation where an element goes from red to black. I applied this animation to the third H3 element on the page (instructions), where it plays indefinitely over the course of 1 second. All H1 and H3 elements have been given the font family Segoe UI', Tahoma, Geneva, Verdana, sans-serif to add a little readability. The whole document container has been given padding using the shorthand for top right bottom left. To simulate a mobile phone (iPhone X here), it’s been given a fixed width of 375px; It’s background color is now an off-white, set with a hexadecimal code. Top right bottom and left have also been used with an auto margin to completely center the container. It was given a rounded (border-radius to 25px) black border to simulate a bezel. The title container has a background-color similar to BYUI’s blue used on their web properties. It got padding as well as a white font color and enlarged font-size with em as the value instead of px. The whole body got a linear gradient background using two light hexadecimal color values. The font-size was set with em as well. The menu bar items were aligned horizontally using display: inline-block and given a transparent look with text and a border both using the same blue from earlier. The second set of buttons have some margin on top and the bottom. The ul for menu bar list was given padding. The bottom submission text was struck through. The sidebar heading (grading) font color was changed to a hex green value.", 
+      "Elements that were implemented where rounded borders (border radius).  A background via url was used, centered and set to cover the entire screen. An animation was added to fade to that image from Black. However, the key frames were not properly written. So it misbehaves. I liked the affect so I just left it. I also didn't want the back to continually animate. It would give you a headache. The title has a rounded border as well as a picture in its order. There is also a gradient fade from opaque white to translucent white to make the title text and out. Buttons were given padding so that they didn't just have text. All text that is put in frames are aligned in the center. Margins for all elements have been set to auto to move them to the center.", 
+      "I made a keyframe called galaxy that changes the background color from purple to blue. I made another keyframe called galaxyText that changes the text from blue to white. I made one more animation called doADance that changes the left margin from 100% to 0% for a fade in from the right effect. The body background color is declared as purple. The galaxy animation runs for 5 seconds, infinitely. The text for the body is white. The font family is sets to Gill Sans, etc. The letter-spacing property was used to space all of the letters in the body apart by 5 pixels. The document area’s width is fixed to 400px, the margin is set to 50%, then the galaxyText animation is started and runs for 3 seconds infinitely. A little offset from the background animation. The instructions text is declared afterwards in order to keep it static in white. The bottom section calls the doADance animation for 2s, but only ten times because it’s a resource hog. Every even-numbered div on the page is flipped upside down using transform: rotate(). The menu bar has been eliminated entirely using display: none; The H1 headings were given the Trebuchet, Lucida font family. The select a style sheet items were also increased in font size to 32px; The text decoration was taken away as well with text-decoration: none"];
+      document.getElementById("instructions").innerHTML = descriptions[i];
+    }
+
+		<!-- APPLY STYLES: This function turns off all four stylesheets, then turns one back on -->
+		function applyStyle(i)
+		{
+			disableStyles();
+			document.styleSheets[i].disabled = false;
+      applyDescription(i);
+		}
+    
+	  </script>
+   </body>
+</html>
